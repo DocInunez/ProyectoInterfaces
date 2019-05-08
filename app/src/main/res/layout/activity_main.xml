@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,6 +13,309 @@
         android:layout_height="?attr/actionBarSize"
         app:theme="@style/HeaderBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:elevation="4dp"
-        />
-</RelativeLayout>
+        android:elevation="4dp"/>
+
+    <ScrollView
+        android:id="@+id/ScrollViewVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:text="Pendientes de visualización"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+            <HorizontalScrollView android:id="@+id/HorizontalScrollView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ImageView02"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView03"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView04"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView05"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:text="Recomendados"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+            <HorizontalScrollView android:id="@+id/HorizontalScrollView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/ImageView06"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ImageView07"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView09"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView10"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:text="Últimos estrenos"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+            <HorizontalScrollView android:id="@+id/HorizontalScrollView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/ImageView11"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ImageView12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView13"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView14"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView15"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:text="No bajes tanto"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+            <HorizontalScrollView android:id="@+id/HorizontalScrollView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/ImageView16"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+
+                    <ImageView
+                        android:id="@+id/ImageView17"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:adjustViewBounds="true"
+                        android:isScrollContainer="true"
+                        android:src="@drawable/ibytes"></ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView18"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView19"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/ImageView20"
+                        android:src="@drawable/ibytes"
+                        android:isScrollContainer="true"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent"
+                        android:adjustViewBounds="true">
+                    </ImageView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:text="Aquí ya no hay nada"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"/>
+            <HorizontalScrollView android:id="@+id/HorizontalScrollView05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/ImageView21"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:isScrollContainer="true"
+                    android:src="@drawable/ibytes"></ImageView>
+
+                <ImageView
+                    android:id="@+id/ImageView22"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:isScrollContainer="true"
+                    android:src="@drawable/ibytes"></ImageView>
+                <ImageView
+                    android:id="@+id/ImageView23"
+                    android:src="@drawable/ibytes"
+                    android:isScrollContainer="true"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:adjustViewBounds="true">
+                </ImageView>
+                <ImageView
+                    android:id="@+id/ImageView24"
+                    android:src="@drawable/ibytes"
+                    android:isScrollContainer="true"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:adjustViewBounds="true">
+                </ImageView>
+                <ImageView
+                    android:id="@+id/ImageView25"
+                    android:src="@drawable/ibytes"
+                    android:isScrollContainer="true"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:adjustViewBounds="true">
+                </ImageView>
+            </LinearLayout>
+        </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
