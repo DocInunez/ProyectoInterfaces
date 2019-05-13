@@ -31,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
                 android:text="Pendientes de visualización"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"/>
@@ -48,7 +49,7 @@
                         android:layout_height="fill_parent"
                         android:adjustViewBounds="true"
                         android:isScrollContainer="true"
-                        android:src="@drawable/ibytes"></ImageView>
+                        android:src="@drawable/avengers"></ImageView>
 
                     <ImageView
                         android:id="@+id/ImageView02"
@@ -89,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
                 android:text="Recomendados"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"/>
@@ -147,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
                 android:text="Últimos estrenos"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"/>
@@ -205,6 +208,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
                 android:text="No bajes tanto"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"/>
@@ -263,6 +267,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="5dp"
                 android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
                 android:text="Aquí ya no hay nada"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"/>
