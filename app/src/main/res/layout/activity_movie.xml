@@ -4,7 +4,7 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/grdnt"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
@@ -48,5 +48,14 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_movie" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_action_play_arrow"
+        app:maxImageSize="40dp"
+        android:layout_margin="16dp" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import com.interfacesgraficas.R;
 
-public class MainActivity extends AppCompatActivity
+public class ListGenresActivity extends AppCompatActivity
 {
     private Context context;
     private Toolbar mTopToolbar;
@@ -35,12 +35,25 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_navdraw);
+        setContentView(R.layout.activity_listgenres_navdraw);
 
         context = this;
 
         mTopToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        mTopToolbar.setTitle("Géneros");
         setSupportActionBar(mTopToolbar);
+
+        findViewById(R.id.accion_genre).setOnTouchListener(new View.OnTouchListener()
+    {
+        @Override
+        public boolean onTouch(View view, MotionEvent ev)
+        {
+            Intent it = new Intent(ListGenresActivity.this, GenreActivity.class);
+            startActivity(it);
+
+            return false;
+        }
+    });
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_dehaze);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -57,20 +70,19 @@ public class MainActivity extends AppCompatActivity
                         Fragment fragment = null;
 
                         switch (menuItem.getItemId()) {
-                            case R.id.menu_seccion_1:
+                            case R.id.menu_seccion_0:
                                 /*fragment = new Fragment1();
                                 fragmentTransaction = true;*/
+                                finish();
                                 break;
                             case R.id.menu_seccion_2:
                                 /*fragment = new Fragment2();
                                 fragmentTransaction = true;*/
-                                Intent it0 = new Intent(MainActivity.this, ListGenresActivity.class);
-                                startActivity(it0);
                                 break;
                             case R.id.menu_opcion_1:
                                 break;
                             case R.id.menu_opcion_2:
-                                Intent it = new Intent(MainActivity.this, LoginActivity.class);
+                                Intent it = new Intent(ListGenresActivity.this, LoginActivity.class);
                                 startActivity(it);
 
                                 finish();
@@ -118,7 +130,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public boolean onTouch(View view, MotionEvent ev)
             {
-                Intent it = new Intent(MainActivity.this, MovieActivity.class);
+                Intent it = new Intent(ListGenresActivity.this, MovieActivity.class);
                 startActivity(it);
                 return false;
             }
@@ -138,7 +150,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.app_bar_search) {
-            Toast.makeText(MainActivity.this, "Action clicked", Toast.LENGTH_LONG).show();
+            Toast.makeText(ListGenresActivity.this, "Action clicked", Toast.LENGTH_LONG).show();
             return true;
         }
 

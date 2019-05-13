@@ -10,7 +10,7 @@
     tools:context="activities.MainActivity">
 
     <!-- Layout real de la actividad -->
-    <include layout="@layout/activity_main" />
+    <include layout="@layout/activity_genre" />
 
     <!-- Layout del menú lateral (Navigation View) -->
     <android.support.design.widget.NavigationView
