@@ -85,10 +85,10 @@ public class MovieActivity extends AppCompatActivity {
             userRating.setText(rating);
             releaseDate.setText(dateOfRelease);*/
 
-            nameOfMovie.setText("AVENGERS 4 WOW");
-            plotSynopsis.setText("Muy guapa. 100% especial");
-            userRating.setText("10");
-            releaseDate.setText("12/12/2019");
+            nameOfMovie.setText("Los Vengadores: Endgame");
+            plotSynopsis.setText("Avengers: Endgame \u200B es una película de superhéroes estadounidense de 2019 basada en el grupo los Vengadores de Marvel Comics, producida por Marvel Studios y distribuida por Walt Disney Studios Motion Pictures.");
+            userRating.setText("Puntuación: 10/10");
+            releaseDate.setText("26 de abril de 2019");
 
         /*}else{
             Toast.makeText(this, "No API Data", Toast.LENGTH_SHORT).show();
@@ -147,10 +147,10 @@ public class MovieActivity extends AppCompatActivity {
                     scrollRange = appBarLayout.getTotalScrollRange();
                 }
                 if (scrollRange + verticalOffset == 0){
-                    collapsingToolbarLayout.setTitle("Avengers 4");
+                    collapsingToolbarLayout.setTitle("Los Vengadores: Endgame");
                     isShow = true;
                 }else if (isShow){
-                    collapsingToolbarLayout.setTitle(" ");
+                    collapsingToolbarLayout.setTitle("Los Vengadores: Endgame");
                     isShow = false;
                 }
             }
