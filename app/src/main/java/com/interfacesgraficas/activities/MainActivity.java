@@ -92,6 +92,8 @@ public class MainActivity extends AppCompatActivity
                     }
                 });
 
+        navView.getMenu().getItem(0).setChecked(true);
+
         //Cerrar buscador
         mSearchView = (SearchView) findViewById(R.id.app_bar_search);
 

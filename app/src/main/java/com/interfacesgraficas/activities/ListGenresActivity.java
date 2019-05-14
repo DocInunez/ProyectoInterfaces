@@ -73,6 +73,9 @@ public class ListGenresActivity extends AppCompatActivity
                             case R.id.menu_seccion_0:
                                 /*fragment = new Fragment1();
                                 fragmentTransaction = true;*/
+                                Intent it = new Intent(ListGenresActivity.this, MainActivity.class);
+                                startActivity(it);
+
                                 finish();
                                 break;
                             case R.id.menu_seccion_2:
@@ -82,8 +85,8 @@ public class ListGenresActivity extends AppCompatActivity
                             case R.id.menu_opcion_1:
                                 break;
                             case R.id.menu_opcion_2:
-                                Intent it = new Intent(ListGenresActivity.this, LoginActivity.class);
-                                startActivity(it);
+                                Intent it2 = new Intent(ListGenresActivity.this, LoginActivity.class);
+                                startActivity(it2);
 
                                 finish();
                                 break;
@@ -103,6 +106,7 @@ public class ListGenresActivity extends AppCompatActivity
                         return true;
                     }
                 });
+        navView.getMenu().getItem(2).setChecked(true);
 
         //Cerrar buscador
         mSearchView = (SearchView) findViewById(R.id.app_bar_search);

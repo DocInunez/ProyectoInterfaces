@@ -7,6 +7,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -43,12 +44,25 @@ public class GenreActivity extends AppCompatActivity
         mTopToolbar.setTitle("Acción");
         setSupportActionBar(mTopToolbar);
 
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_dehaze);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Menu lateral
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
-        navView = (NavigationView)findViewById(R.id.navview);
+        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+
+        ActionBarDrawerToggle mToggle = new ActionBarDrawerToggle(this, drawerLayout, mTopToolbar, R.string.hide_bottom_view_on_scroll_behavior, R.string.hide_bottom_view_on_scroll_behavior);
+        mToggle.setDrawerIndicatorEnabled(false);
+        mToggle.syncState();
+        mToggle.setToolbarNavigationClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Backpress action
+                finish();
+            }
+        });
+        drawerLayout.setDrawerListener(mToggle);
+
+        /*navView = (NavigationView)findViewById(R.id.navview);
         navView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -59,38 +73,28 @@ public class GenreActivity extends AppCompatActivity
 
                         switch (menuItem.getItemId()) {
                             case R.id.menu_seccion_0:
-                                /*fragment = new Fragment1();
-                                fragmentTransaction = true;*/
+                                Intent it = new Intent(GenreActivity.this, MainActivity.class);
+                                startActivity(it);
+
                                 finish();
                                 break;
                             case R.id.menu_seccion_2:
-                                /*fragment = new Fragment2();
-                                fragmentTransaction = true;*/
                                 break;
                             case R.id.menu_opcion_1:
                                 break;
                             case R.id.menu_opcion_2:
-                                Intent it = new Intent(GenreActivity.this, LoginActivity.class);
-                                startActivity(it);
+                                Intent it2 = new Intent(GenreActivity.this, LoginActivity.class);
+                                startActivity(it2);
 
                                 finish();
                                 break;
                         }
 
-                        /*if(fragmentTransaction) {
-                            getSupportFragmentManager().beginTransaction()
-                                    .replace(R.id.content_frame, fragment)
-                                    .commit();
-
-                            menuItem.setChecked(true);
-                            getSupportActionBar().setTitle(menuItem.getTitle());
-                        }*/
-
                         drawerLayout.closeDrawers();
 
                         return true;
                     }
-                });
+                });*/
 
         //Cerrar buscador
         mSearchView = (SearchView) findViewById(R.id.app_bar_search);
