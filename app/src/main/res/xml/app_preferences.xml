@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.preference.PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <android.support.v7.preference.PreferenceCategory
+        android:title="Opciones de la aplicación">
+
+        <ListPreference
+            android:key="language_preference"
+            android:title="Idioma"
+            android:summary="Elegir el idioma"
+            android:textColor="#DDDDDD"
+            android:entries="@array/idiomas"
+            android:entryValues="@array/idiomas"/>
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="key1"
+            android:title="Login automático"
+            android:summary="Iniciar sesion automáticamente al abrir la app"
+            android:defaultValue="true" />
+
+    </android.support.v7.preference.PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

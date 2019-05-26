@@ -68,10 +68,13 @@ public class MainActivity extends AppCompatActivity
                                 startActivity(it0);
                                 break;
                             case R.id.menu_opcion_1:
+                                Intent it = new Intent(MainActivity.this, SettingsActivity.class);
+                                startActivity(it);
+
                                 break;
                             case R.id.menu_opcion_2:
-                                Intent it = new Intent(MainActivity.this, LoginActivity.class);
-                                startActivity(it);
+                                Intent it2 = new Intent(MainActivity.this, LoginActivity.class);
+                                startActivity(it2);
 
                                 finish();
                                 break;

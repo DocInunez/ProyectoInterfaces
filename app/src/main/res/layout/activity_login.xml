@@ -96,6 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textSize="17dp"
             android:text="Crea una cuenta aquí"
             android:textColor="#d9e5f3"
             android:letterSpacing="0.1"/>
@@ -106,8 +107,8 @@
         android:gravity="center"
         android:layout_marginBottom="400dp">
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:src="@drawable/yt"
             />
     </LinearLayout>

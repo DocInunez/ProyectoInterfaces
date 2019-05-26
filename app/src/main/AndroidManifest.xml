@@ -22,6 +22,7 @@
         <activity android:name=".activities.ListGenresActivity"></activity>
         <activity android:name=".activities.GenreActivity"></activity>
         <activity android:name=".activities.SignupActivity"></activity>
+        <activity android:name=".activities.SettingsActivity" android:theme="@style/PreferenceTheme"></activity>
     </application>
 
 </manifest>
